@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProjectController; 
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +15,15 @@ use App\Http\Controllers\ProjectController;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
     return view('auth.login');
+
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('/projects', ProjectController::class)->middleware('auth'); 
+Route::resource('/projects', ProjectController::class)->middleware('auth');
+
+Route::get('auth/{provider}', 'App\Http\Controllers\Auth\SocialAuthController@redirectToProvider')->name('social.auth');
+Route::get('auth/{provider}/callback', 'App\Http\Controllers\Auth\SocialAuthController@handleProviderCallback');

@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
  * Class Project
  *
  * @property $id
- * @property $usuario
- * @property $contraseña
- * @property $correo
+ * @property $title
+ * @property $content
  * @property $created_at
  * @property $updated_at
  *
@@ -21,9 +20,8 @@ class Project extends Model
 {
     
     static $rules = [
-		'usuario' => 'required',
-		'contraseña' => 'required',
-		'correo' => 'required',
+		'title' => 'required',
+		'content' => 'required',
     ];
 
     protected $perPage = 20;
@@ -33,7 +31,7 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['usuario','contraseña','correo'];
+    protected $fillable = ['title','content'];
 
 
 

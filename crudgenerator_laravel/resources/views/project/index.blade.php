@@ -36,9 +36,8 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Usuario</th>
-										<th>Contraseña</th>
-										<th>Correo</th>
+										<th>Title</th>
+										<th>Content</th>
 
                                         <th></th>
                                     </tr>
@@ -48,9 +47,8 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $project->usuario }}</td>
-											<td>{{ $project->contraseña }}</td>
-											<td>{{ $project->correo }}</td>
+											<td>{{ $project->title }}</td>
+											<td>{{ $project->content }}</td>
 
                                             <td>
                                                 <form action="{{ route('projects.destroy',$project->id) }}" method="POST">

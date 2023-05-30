@@ -2,19 +2,14 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('usuario') }}
-            {{ Form::text('usuario', $project->usuario, ['class' => 'form-control' . ($errors->has('usuario') ? ' is-invalid' : ''), 'placeholder' => 'Usuario']) }}
-            {!! $errors->first('usuario', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('title') }}
+            {{ Form::text('title', $project->title, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
+            {!! $errors->first('title', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('contraseña') }}
-            {{ Form::text('contraseña', $project->contraseña, ['class' => 'form-control' . ($errors->has('contraseña') ? ' is-invalid' : ''), 'placeholder' => 'Contraseña']) }}
-            {!! $errors->first('contraseña', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('correo') }}
-            {{ Form::text('correo', $project->correo, ['class' => 'form-control' . ($errors->has('correo') ? ' is-invalid' : ''), 'placeholder' => 'Correo']) }}
-            {!! $errors->first('correo', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('content') }}
+            {{ Form::text('content', $project->content, ['class' => 'form-control' . ($errors->has('content') ? ' is-invalid' : ''), 'placeholder' => 'Content']) }}
+            {!! $errors->first('content', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>

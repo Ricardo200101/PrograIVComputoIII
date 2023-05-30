@@ -21,16 +21,12 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Usuario:</strong>
-                            {{ $project->usuario }}
+                            <strong>Title:</strong>
+                            {{ $project->title }}
                         </div>
                         <div class="form-group">
-                            <strong>Contraseña:</strong>
-                            {{ $project->contraseña }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Correo:</strong>
-                            {{ $project->correo }}
+                            <strong>Content:</strong>
+                            {{ $project->content }}
                         </div>
 
                     </div>
